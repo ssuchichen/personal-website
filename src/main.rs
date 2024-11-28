@@ -3,10 +3,14 @@ use axum::Router;
 use dotenv::dotenv;
 use tower_http::cors::{Any, CorsLayer};
 use tower_http::services::{ServeDir, ServeFile};
+use tracing_subscriber::filter::LevelFilter;
 
 #[tokio::main]
 async fn main() {
     dotenv().ok().unwrap();
+    tracing_subscriber::fmt()
+        .with_max_level(LevelFilter::DEBUG)
+        .init();
 
     let cors =
         CorsLayer::new()
@@ -15,7 +19,7 @@ async fn main() {
 
     let router = Router::new().layer(cors).fallback_service(routes_static());
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
     axum::serve(listener, router).await.unwrap();
 }
 
