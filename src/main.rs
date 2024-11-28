@@ -19,7 +19,7 @@ async fn main() {
 
     let router = Router::new().layer(cors).fallback_service(routes_static());
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:80").await.unwrap();
     axum::serve(listener, router).await.unwrap();
 }
 
@@ -29,4 +29,3 @@ fn routes_static() -> Router {
         ServeDir::new("assets").not_found_service(ServeFile::new("assets/index.html")),
     )
 }
-
