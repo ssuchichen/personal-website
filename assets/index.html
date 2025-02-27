@@ -4,38 +4,72 @@
     <meta charset="UTF-8">
     <title>SsuchiChen</title>
     <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+    <style>
+        .lang-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+
+        .lang-toggle {
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            border-radius: 17px; /* 修改圆角，使其更像一个按钮 */
+            border: none;
+            cursor: pointer;
+            font-size: 16px; /* 添加字体大小 */
+            transition: background-color 0.4s; /* 添加背景颜色过渡效果 */
+        }
+
+        .lang-toggle.en {
+            background-color: #4CAF50; /* 英文状态的背景颜色 */
+            color: white; /* 英文状态的字体颜色 */
+        }
+
+        .lang-toggle.zh {
+            background-color: #2196F3; /* 中文状态的背景颜色 */
+            color: white; /* 中文状态的字体颜色 */
+        }
+    </style>
 </head>
 <body>
+<div class="lang-container">
+    <button id="lang-toggle" class="lang-toggle en"></button>
+</div>
 <div id="layout-content">
     <table class="imgtable">
-    <tr>
-        <td><img src="images/ssuchichen.png" height="200px"  alt="ssuchichen"></td>&nbsp;
-        <td>
-            <p style="font-size:30px;">陈思齐 Ssu-chi Chen</p>
-            <p><b>Github:</b> https://github.com/ssuchichen</p>
-            <p><b>WeChat:</b> ssuchichen</p>
-            <p><b>Phone:</b> (+86) 19150303250</p>
-            <p><b>Email:</b> ssuchichen9010@gmail.com</p>
-        </td>
-    </tr>
-  </table>
-    <h2>Bio</h2>
-    <p><ul></p>
-    <p><li style="font-size:18px;">I am a programming enthusiast and programmer.</p>
-    <p><li style="font-size:18px;">I have rich programming experience.</p>
-    <p><li style="font-size:18px;">My undergraduate major is computer science and technology.</p>
-    <p></ul></p>
-    <h2>Key Skills</h2>
-    <p><ul></p>
-    <p><li style="font-size:18px;">5+ years of back-end engineering with Rust Experience and Blockchain.</p>
-    <p><li style="font-size:18px;">Proficient in backend technologies including Rust, Python, GoLang. </p>
-    <p><li style="font-size:18px;">Expertise in PostgreSQL database management and Redis caching system.</p>
-    <p><li style="font-size:18px;">Solid understanding and experience in Linux Operations.</p>
-    <p><li style="font-size:18px;">Deep understanding of Rust and its ecosystem, with a proven track record of building and deploying production-quality code. </p>
-    <p><li style="font-size:18px;">Having significant experience in building products from the ground up, with a deep understanding of the full product lifecycle from conception to deployment.</p>
-    <p><li style="font-size:18px;">Passion for high-quality code and effective software engineering processes with a focus on execution and delivery.</p>
-    <p><li style="font-size:18px;">Strong verbal and written communication skills, ability to articulate the vision and influence stakeholders across the company. </p>
-    <p></ul></p>
+        <tr>
+            <td><img src="images/ssuchichen.png" height="300px" alt="ssuchichen"></td>
+            <td>
+                <p id="name" style="font-size:30px;">Ssu-chi Chen</p>
+                <p id="github1"><b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a></p>
+                <p id="github2"><b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a></p>
+                <p id="wechat"><b>WeChat:</b> ssuchichen</p>
+                <p id="phone"><b>Phone:</b> (+86) 19150303250</p>
+                <p id="email"><b>Email:</b> ssuchichen9010@gmail.com</p>
+            </td>
+        </tr>
+    </table>
+    <h2 id="bio-title">Bio</h2>
+    <ul id="bio-list">
+        <li id="bio1" style="font-size:18px;">I am a programming enthusiast and programmer.</li>
+        <li id="bio2" style="font-size:18px;">I have rich programming experience.</li>
+        <li id="bio3" style="font-size:18px;">My undergraduate major is computer science and technology.</li>
+    </ul>
+    <h2 id="skills-title">Key Skills</h2>
+    <ul id="skills-list">
+        <li id="skill1" style="font-size:18px;">5+ years of back-end engineering with Rust Experience and Blockchain.</li>
+        <li id="skill2" style="font-size:18px;">Proficient in backend technologies including Rust, Python, GoLang.</li>
+        <li id="skill3" style="font-size:18px;">Expertise in PostgreSQL database management and Redis caching system.</li>
+        <li id="skill4" style="font-size:18px;">Solid understanding and experience in Linux Operations.</li>
+        <li id="skill5" style="font-size:18px;">Deep understanding of Rust and its ecosystem, with a proven track record of building and deploying production-quality code.</li>
+        <li id="skill6" style="font-size:18px;">Having significant experience in building products from the ground up, with a deep understanding of the full product lifecycle from conception to deployment.</li>
+        <li id="skill7" style="font-size:18px;">Passion for high-quality code and effective software engineering processes with a focus on execution and delivery.</li>
+        <li id="skill8" style="font-size:18px;">Strong verbal and written communication skills, ability to articulate the vision and influence stakeholders across the company.</li>
+    </ul>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
