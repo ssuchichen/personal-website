@@ -3,7 +3,7 @@ const content = {
     en: {
         name: 'Ssu-chi Chen',
         github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
-        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichen</a>',
+        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
         wechat: '<b>WeChat:</b> ssuchichen',
         phone: '<b>Phone:</b> (+86) 19150303250',
         email: '<b>Email:</b> ssuchichen9010@gmail.com',
