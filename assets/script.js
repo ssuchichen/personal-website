@@ -1,12 +1,13 @@
 const langToggle = document.getElementById('lang-toggle');
 const content = {
     en: {
-        name: 'Ssu-chi Chen',
+        name: '<b>Name:</b> Miles Ssu-chi Chen',
+        wechat: '<b>WeChat:</b> ssuchichen',
+        phone: '<b>Phone:</b> <span>(+86) 19150303250</span>',
+        email: '<b>Email:</b> ssuchichan@gmail.com',
+        location:'<b>Location:</b> Chengdu, Sichuan Province, China',
         github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
         github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
-        wechat: '<b>WeChat:</b> ssuchichen',
-        phone: '<b>Phone:</b> (+86) 19150303250',
-        email: '<b>Email:</b> ssuchichen9010@gmail.com',
         bioTitle: 'Bio',
         bio1: 'I am a programming enthusiast and programmer.',
         bio2: 'I have rich programming experience.',
@@ -22,12 +23,13 @@ const content = {
         skill8: 'Strong verbal and written communication skills, ability to articulate the vision and influence stakeholders across the company.'
     },
     zh: {
-        name: '陈思齐',
+        name: '<b>姓名:</b> 陈思齐',
+        wechat: '<b>微信:</b> ssuchichen',
+        phone: '<b>电话:</b> <span>19150303250</span>',
+        email: '<b>邮箱:</b> ssuchichen@163.com',
+        location:'<b>所在地:</b> 中国四川省成都市',
         github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
         github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
-        wechat: '<b>微信:</b> ssuchichen',
-        phone: '<b>电话:</b> (+86) 19150303250',
-        email: '<b>邮箱:</b> ssuchichen9010@gmail.com',
         bioTitle: '简介',
         bio1: '我是一个编程爱好者和程序员。',
         bio2: '我拥有丰富的编程经验。',
@@ -54,6 +56,7 @@ function updateContent() {
     document.getElementById('wechat').innerHTML = langData.wechat;
     document.getElementById('phone').innerHTML = langData.phone;
     document.getElementById('email').innerHTML = langData.email;
+    document.getElementById('location').innerHTML = langData.location;
     document.getElementById('bio-title').textContent = langData.bioTitle;
     document.getElementById('bio1').textContent = langData.bio1;
     document.getElementById('bio2').textContent = langData.bio2;
