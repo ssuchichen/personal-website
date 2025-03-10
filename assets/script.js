@@ -2,6 +2,7 @@ const langToggle = document.getElementById('lang-toggle');
 const content = {
     en: {
         name: '<b>Name:</b> Miles Ssu-chi Chen',
+        twitter: '<b>X:</b><a href="https://x.com/ssuchichen"> @ssuchichen</a>',
         wechat: '<b>WeChat:</b> ssuchichen',
         phone: '<b>Phone:</b> <span>(+86) 19150303250</span>',
         email: '<b>Email:</b> ssuchichan@gmail.com',
@@ -9,11 +10,11 @@ const content = {
         github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
         github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
         bioTitle: 'Bio',
-        bio1: 'I am a programming enthusiast and programmer.',
-        bio2: 'I have rich programming experience.',
-        bio3: 'My undergraduate major is computer science and technology.',
+        bio1: 'I am a programmer with extensive programming experience.',
+        bio2: 'My major is computer science and technology.',
+        bio3: 'I am currently mainly engaged in blockchain-related work.',
         skillsTitle: 'Key Skills',
-        skill1: '5+ years of back-end engineering with Rust Experience and Blockchain.',
+        skill1: '5+ years of back-end engineering Experience and Blockchain.',
         skill2: 'Proficient in programming languages including C/C++, Rust, GoLang, Python.',
         skill3: 'Expertise in PostgreSQL database management and Redis caching system.',
         skill4: 'Solid understanding and experience in Linux.',
@@ -24,6 +25,7 @@ const content = {
     },
     zh: {
         name: '<b>姓名:</b> 陈思齐',
+        twitter: '<b>推特:</b><a href="https://x.com/ssuchichen"> @ssuchichen</a>',
         wechat: '<b>微信:</b> ssuchichen',
         phone: '<b>电话:</b> <span>19150303250</span>',
         email: '<b>邮箱:</b> ssuchichen@163.com',
@@ -31,13 +33,13 @@ const content = {
         github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
         github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
         bioTitle: '简介',
-        bio1: '我是一个编程爱好者和程序员。',
-        bio2: '我拥有丰富的编程经验。',
-        bio3: '我的本科专业是计算机科学与技术。',
+        bio1: '我是一名程序员，拥有丰富的编程经验。',
+        bio2: '我的专业是计算机科学与技术。',
+        bio3: '我目前主要从事区块链相关的工作。',
         skillsTitle: '关键技能',
-        skill1: '5年以上Rust后端工程和区块链经验。',
-        skill2: '精通C/C++、Rust、GoLang、Python等语言。',
-        skill3: '精通 PostgreSQL 数据库管理和 Redis 缓存系统。',
+        skill1: '5年以上后端工程和区块链经验。',
+        skill2: '精通Rust，C/C++，GoLang，Python等语言。',
+        skill3: '精通PostgreSQL数据库管理和Redis缓存系统。',
         skill4: '扎实的Linux操作系统理解和经验。',
         skill5: '深入理解Rust及其生态系统，具有构建和部署生产质量代码的良好记录。',
         skill6: '在从头开始构建产品方面拥有丰富的经验，对从概念到部署的完整产品生命周期有深入的了解。',
@@ -53,6 +55,7 @@ function updateContent() {
     document.getElementById('name').innerHTML = langData.name;
     document.getElementById('github1').innerHTML = langData.github1;
     document.getElementById('github2').innerHTML = langData.github2;
+    document.getElementById("twitter").innerHTML = langData.twitter;
     document.getElementById('wechat').innerHTML = langData.wechat;
     document.getElementById('phone').innerHTML = langData.phone;
     document.getElementById('email').innerHTML = langData.email;
