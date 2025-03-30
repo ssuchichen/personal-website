@@ -14,7 +14,7 @@ const content = {
         bio2: 'My major is computer science and technology.',
         bio3: 'I am currently mainly engaged in blockchain-related work.',
         skillsTitle: 'Key Skills',
-        skill1: '5+ years of back-end engineering Experience and Blockchain.',
+        skill1: '10+ years of back-end engineering Experience and Blockchain.',
         skill2: 'Proficient in programming languages including C/C++, Rust, GoLang, Python.',
         skill3: 'Expertise in PostgreSQL database management and Redis caching system.',
         skill4: 'Solid understanding and experience in Linux.',
