@@ -16,11 +16,11 @@ async fn main() {
         .init();
 
     // ssl
-    let cert_file = env::var("SSL_CERT_FILE").expect("CERT_PATH must be set");
-    let key_file = env::var("SSL_KEY_FILE").expect("CERT_KEY_PATH must be set");
-    let tls_config = RustlsConfig::from_pem_file(cert_file, key_file)
-        .await
-        .unwrap();
+    // let cert_file = env::var("SSL_CERT_FILE").expect("CERT_PATH must be set");
+    // let key_file = env::var("SSL_KEY_FILE").expect("CERT_KEY_PATH must be set");
+    // let tls_config = RustlsConfig::from_pem_file(cert_file, key_file)
+    //     .await
+    //     .unwrap();
 
     let cors =
         CorsLayer::new()
@@ -29,9 +29,9 @@ async fn main() {
 
     let router = Router::new().layer(cors).fallback_service(routes_static());
 
-    let addr = SocketAddr::from(([0, 0, 0, 0], 443));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 9168));
 
-    axum_server::bind_rustls(addr, tls_config)
+    axum_server::bind(addr)
         .serve(router.into_make_service())
         .await
         .unwrap();
