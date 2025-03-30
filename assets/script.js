@@ -6,9 +6,9 @@ const content = {
         wechat: '<b>WeChat:</b> ssuchichen',
         phone: '<b>Phone:</b> <span>(+86) 19150303250</span>',
         email: '<b>Email:</b> ssuchichan@gmail.com',
-        location:'<b>Location:</b> Chengdu, Sichuan Province, China',
-        github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
-        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
+        location: '<b>Location:</b> Chengdu, Sichuan Province, China',
+        github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">ssuchichen</a>',
+        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">ssuchichan</a>',
         bioTitle: 'Bio',
         bio1: 'I am a programmer with extensive programming experience.',
         bio2: 'My major is computer science and technology.',
@@ -29,15 +29,15 @@ const content = {
         wechat: '<b>微信:</b> ssuchichen',
         phone: '<b>电话:</b> <span>19150303250</span>',
         email: '<b>邮箱:</b> ssuchichen@163.com',
-        location:'<b>所在地:</b> 中国四川省成都市',
-        github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a>',
-        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a>',
+        location: '<b>所在地:</b> 中国四川省成都市',
+        github1: '<b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">ssuchichen</a>',
+        github2: '<b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">ssuchichan</a>',
         bioTitle: '简介',
         bio1: '我是一名程序员，拥有丰富的编程经验。',
         bio2: '我的专业是计算机科学与技术。',
         bio3: '我目前主要从事区块链相关的工作。',
         skillsTitle: '关键技能',
-        skill1: '5年以上后端工程和区块链经验。',
+        skill1: '10年以上后端工程和区块链经验。',
         skill2: '精通Rust，C/C++，GoLang，Python等语言。',
         skill3: '精通PostgreSQL数据库管理和Redis缓存系统。',
         skill4: '扎实的Linux操作系统理解和经验。',
@@ -74,6 +74,7 @@ function updateContent() {
     document.getElementById('skill7').textContent = langData.skill7;
     document.getElementById('skill8').textContent = langData.skill8;
     langToggle.textContent = currentLang === 'en' ? '中文' : 'English';
+    langToggle.className = 'lang-toggle ' + currentLang; // 更新按钮样式
 }
 
 langToggle.addEventListener('click', () => {
@@ -81,4 +82,4 @@ langToggle.addEventListener('click', () => {
     updateContent();
 });
 
-updateContent();
+updateContent(); // 初始化内容

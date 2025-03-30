@@ -2,76 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SsuchiChen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ssuchi Chen</title>
     <link rel="stylesheet" href="jemdoc.css" type="text/css" />
     <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 语言切换按钮 */
         .lang-container {
             position: fixed;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            right: 20px;
             z-index: 100;
         }
 
         .lang-toggle {
-            display: inline-block;
-            width: 70px;
+            width: 80px;
             height: 40px;
-            border-radius: 17px; /* 修改圆角，使其更像一个按钮 */
+            border-radius: 20px;
             border: none;
             cursor: pointer;
-            font-size: 16px; /* 添加字体大小 */
-            transition: background-color 0.4s; /* 添加背景颜色过渡效果 */
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .lang-toggle.en {
-            background-color: #4CAF50; /* 英文状态的背景颜色 */
-            color: white; /* 英文状态的字体颜色 */
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
         }
 
         .lang-toggle.zh {
-            background-color: #2196F3; /* 中文状态的背景颜色 */
-            color: white; /* 中文状态的字体颜色 */
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+        }
+
+        .lang-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 主内容区域 */
+        #layout-content {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 个人信息区域 */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-container img {
+            width: 300px;
+            height: 330px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .profile-info b {
+            color: #555;
+        }
+
+        .profile-info a {
+            color: #2196F3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .profile-info a:hover {
+            color: #1976D2;
+            text-decoration: underline;
+        }
+
+        /* 标题样式 */
+        h2 {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 5px;
+            width: fit-content;
+        }
+
+        /* 列表样式 */
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin: 15px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            color: #4CAF50;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-container img {
+                width: 200px;
+                height: 220px;
+            }
+
+            .lang-container {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
 <div class="lang-container">
-    <button id="lang-toggle" class="lang-toggle en"></button>
+    <button id="lang-toggle" class="lang-toggle en">EN</button>
 </div>
 <div id="layout-content">
-    <table class="imgtable">
-        <tr>
-            <td><img src="images/ssuchichen.png" width="300px" height="330px" alt="ssuchichen"></td>
-            <td>
-                <p id="name"><b>Name:</b> Ssu-chi Chen</p>
-                <p id="twitter"><b>X:</b><a href="https://x.com/ssuchichen">@ssuchichen</a></p>
-                <p id="wechat"><b>WeChat:</b> ssuchichen</p>
-                <p id="phone"><b>Phone:</b> (+86) 19150303250</p>
-                <p id="email"><b>Email:</b> ssuchichen9010@gmail.com</p>
-                <p id="location"><b>Location:</b>Chengdu, Sichuan Province, China</p>
-                <p id="github1"><b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">https://github.com/ssuchichen</a></p>
-                <p id="github2"><b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">https://github.com/ssuchichan</a></p>
-            </td>
-        </tr>
-    </table>
+    <div class="profile-container">
+        <img src="images/ssuchichen.png" alt="Ssuchi Chen">
+        <div class="profile-info">
+            <p id="name"><b>Name:</b> Ssu-chi Chen</p>
+            <p id="twitter"><b>X:</b> <a href="https://x.com/ssuchichen">@ssuchichen</a></p>
+            <p id="wechat"><b>WeChat:</b> ssuchichen</p>
+            <p id="phone"><b>Phone:</b> (+86) 19150303250</p>
+            <p id="email"><b>Email:</b> ssuchichen9010@gmail.com</p>
+            <p id="location"><b>Location:</b> Chengdu, Sichuan Province, China</p>
+            <p id="github1"><b>Github:</b> <a href="https://github.com/ssuchichen" target="_blank">ssuchichen</a></p>
+            <p id="github2"><b>Github:</b> <a href="https://github.com/ssuchichan" target="_blank">ssuchichan</a></p>
+        </div>
+    </div>
+
     <h2 id="bio-title">Bio</h2>
     <ul id="bio-list">
-        <li id="bio1" style="font-size:18px;">I am a programming enthusiast and programmer.</li>
-        <li id="bio2" style="font-size:18px;">I have rich programming experience.</li>
-        <li id="bio3" style="font-size:18px;">My undergraduate major is computer science and technology.</li>
+        <li id="bio1">I am a programming enthusiast and programmer.</li>
+        <li id="bio2">I have rich programming experience.</li>
+        <li id="bio3">My undergraduate major is computer science and technology.</li>
     </ul>
+
     <h2 id="skills-title">Key Skills</h2>
     <ul id="skills-list">
-        <li id="skill1" style="font-size:18px;">5+ years of back-end engineering with Rust Experience and Blockchain.</li>
-        <li id="skill2" style="font-size:18px;">Proficient in backend technologies including Rust, Python, GoLang.</li>
-        <li id="skill3" style="font-size:18px;">Expertise in PostgreSQL database management and Redis caching system.</li>
-        <li id="skill4" style="font-size:18px;">Solid understanding and experience in Linux Operations.</li>
-        <li id="skill5" style="font-size:18px;">Deep understanding of Rust and its ecosystem, with a proven track record of building and deploying production-quality code.</li>
-        <li id="skill6" style="font-size:18px;">Having significant experience in building products from the ground up, with a deep understanding of the full product lifecycle from conception to deployment.</li>
-        <li id="skill7" style="font-size:18px;">Passion for high-quality code and effective software engineering processes with a focus on execution and delivery.</li>
-        <li id="skill8" style="font-size:18px;">Strong verbal and written communication skills, ability to articulate the vision and influence stakeholders across the company.</li>
+        <li id="skill1">10+ years of back-end engineering with Rust Experience and Blockchain.</li>
+        <li id="skill2">Proficient in backend technologies including Rust, Python, GoLang.</li>
+        <li id="skill3">Expertise in PostgreSQL database management and Redis caching system.</li>
+        <li id="skill4">Solid understanding and experience in Linux Operations.</li>
+        <li id="skill5">Deep understanding of Rust and its ecosystem, with a proven track record of building and deploying production-quality code.</li>
+        <li id="skill6">Having significant experience in building products from the ground up, with a deep understanding of the full product lifecycle from conception to deployment.</li>
+        <li id="skill7">Passion for high-quality code and effective software engineering processes with a focus on execution and delivery.</li>
+        <li id="skill8">Strong verbal and written communication skills, ability to articulate the vision and influence stakeholders across the company.</li>
     </ul>
 </div>
-<script src="script.js"></script>
+
+<script src="script.js">
+
+</script>
 </body>
 </html>
